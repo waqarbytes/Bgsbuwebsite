@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Information Technology - BGSBU</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Department-specific styles */
+        .department-hero {
+            position: relative;
+            height: 70vh;
+            overflow: hidden;
+            margin-top: 40px;
+            background: linear-gradient(45deg, rgba(30, 64, 175, 0.95), rgba(59, 130, 246, 0.95));
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100px 100px;
+            }
+        }
+
+        .department-hero-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .department-hero h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(to right, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .department-hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            max-width: 800px;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .about-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(to bottom, #000000, #111827);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #3b82f6;
+        }
+
+        .about-content p {
+            color: #9ca3af;
+            line-height: 1.8;
+        }
+
+        .quick-links {
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .quick-link-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-5px);
+            background: rgba(59, 130, 246, 0.05);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .quick-link-card .icon {
+            font-size: 2rem;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+
+        .quick-link-card h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .quick-link-card p {
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-link-card .link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .quick-link-card .link-button:hover {
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .department-hero {
+                height: 60vh;
+            }
+
+            .about-section,
+            .quick-links {
+                padding: 4rem 1rem;
+            }
+
+            .quick-links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Notification Bar -->
+    <div class="notification-bar">
+        <div class="notification-container">
+            <div class="notification-scroll">
+                <div class="notification-content">
+                    <span class="notification-item">🎓 Final Year Results Published - Check Student Portal</span>
+                    <span class="notification-item">📊 Semester 5 Results Available Now</span>
+                    <span class="notification-item">🎯 Entrance Exam Results 2025 Declared</span>
+                    <span class="notification-item">📝 Mid-term Examination Results Updated</span>
+                </div>
+            </div>
+            <button class="notification-close">×</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="graduation-cap">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                <span>BGSBU</span>
+            </div>
+
+            <button class="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Administration</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Chancellor</a></li>
+                        <li><a href="#">Vice Chancellor</a></li>
+                        <li><a href="#">Dean of Affairs</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Dean of Student Welfare</a></li>
+                        <li><a href="#">Dean of All School</a></li>
+                        <li><a href="#">Chief Pay and Account Officer</a></li>
+                        <li><a href="#">Controller of Examination</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">School of Studies</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">School of Mathematical & Computer Science</a></li>
+                        <li><a href="#">School of Material Science & Nanotechnology</a></li>
+                        <li><a href="ITE.html">School of Information Technology & Technology</a></li>
+                        <li><a href="#">School of Management studies</a></li>
+                        <li><a href="#">School of Bioscience & Bio technolgy</a></li>
+                        <li><a href="#">School of Education</a></li>
+                        <li><a href="#">School of Islamic studies & Language</a></li>
+                        <li><a href="#">School of Nursing & Biomedical Science</a></li>
+                        <li><a href="#">School of Social Science</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Amenities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Central Library</a></li>
+                        <li><a href="#">Placement</a></li>
+                        <li><a href="#">Hall of Residence</a></li>
+                        <li><a href="#">Health <Center></Center></a></li>
+                        <li><a href="#">Sports/Gymansium/Cultural Acitivites</a></li>
+                        <li><a href="#">Transport Service</a></li>
+                        <li><a href="#">Canteen</a></li>
+                        <li><a href="#">Bank Facility</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Notification</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">University Admission</a></li>
+                        <li><a href="#">University Examination</a></li>
+                        <li><a href="#">University Result </a></li>
+                        <li><a href="#">University Recruitment</a></li>
+                        <li><a href="#">University Tenders</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Jobs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Job Notification</a></li>
+                        <li><a href="#">Apply for Academic Arrangement-2024</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Job Notification</a></li>
+                        <li><a href="#">Apply for Academic Arrangement-2024</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#">Research</a></li> -->
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="department-hero">
+        <div class="hero-pattern"></div>
+        <div class="department-hero-content">
+            <h1>Department of Information Technology and Engineering</h1>
+            <p>Shaping the future through innovation, research, and technological excellence</p>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About the Department</h2>
+            <p>The Department of Information Technology and Engineering (ITE) was established in 2007 and is one of the
+                pioneer Departments of School of Engineering. We offer comprehensive B.Tech and Ph.D. programs designed
+                to meet the evolving demands of the technology sector. Our curriculum is regularly updated to reflect
+                current industry trends and future directions, ensuring our students remain at the forefront of
+                technological innovation.</p>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <div class="quick-links-grid">
+            <div class="quick-link-card">
+                <div class="icon">🎯</div>
+                <h3>Vision and Mission</h3>
+                <p>Discover our commitment to excellence and innovation in technology education.</p>
+                <a href="#vision" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">🎓</div>
+                <h3>Admission Process</h3>
+                <p>Start your journey with us. Learn about our admission requirements and procedures.</p>
+                <a href="#admission" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">🔬</div>
+                <h3>Research</h3>
+                <p>Explore our cutting-edge research initiatives and breakthrough innovations.</p>
+                <a href="#research" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">📚</div>
+                <h3>Programs</h3>
+                <p>Explore our comprehensive range of academic programs and specializations.</p>
+                <a href="#programs" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">👨‍🏫</div>
+                <h3>Faculty</h3>
+                <p>Meet our distinguished faculty members and research supervisors.</p>
+                <a href="#faculty" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">📅</div>
+                <h3>Events</h3>
+                <p>Stay updated with department events, seminars, and workshops.</p>
+                <a href="#events" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">👥</div>
+                <h3>Alumni</h3>
+                <p>Connect with our distinguished alumni network worldwide.</p>
+                <a href="#alumni" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">📸</div>
+                <h3>Gallery</h3>
+                <p>Visual glimpses of our department's activities and achievements.</p>
+                <a href="#gallery" class="link-button">Learn More →</a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon">📋</div>
+                <h3>Syllabus</h3>
+                <p>Access detailed course structures and academic curriculum.</p>
+                <a href="#syllabus" class="link-button">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Important Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Admission Requirements</a></li>
+                        <li><a href="#">Financial Aid</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Library Resources</a></li>
+                        <li><a href="#">Career Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Campus Map</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="#">Emergency Information</a></li>
+                        <li><a href="#">IT Support</a></li>
+                        <li><a href="#">Parking Services</a></li>
+                        <li><a href="#">Health Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">123 University Ave</a></li>
+                        <li><a href="#">Rajauri, Jammu and Kashmir 12345</a></li>
+                        <li><a href="tel:+1234567890">+12345678</a></li>
+                        <li><a href="mailto:info@bgsbu.edu">info@bgsbu.edu</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 BGSBU. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

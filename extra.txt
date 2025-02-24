@@ -1,0 +1,89 @@
+ <!-- <div class="tab-content active" id="notifications">
+                    <div class="quick-links-grid">
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">📚</span>
+                                <span>LMS (Moodle)</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">🛡️</span>
+                                <span>Anti Ragging</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">📊</span>
+                                <span>NIRF</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">🎯</span>
+                                <span>TEQIP-III</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">📋</span>
+                                <span>NAD</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">📚</span>
+                                <span>National Digital Library</span>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+                circular
+
+
+                
+
+                  <div class="tab-content" id="circulars">
+                    <div class="quick-links-grid">
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">👨‍🎓</span>
+                                <span>Student Corner</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">🔐</span>
+                                <span>SAMARTH Staff Login</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">📊</span>
+                                <span>NAAC</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">🌐</span>
+                                <span>NSS Registration</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">📑</span>
+                                <span>Annual Reports</span>
+                            </a>
+                        </div>
+                        <div class="quick-link-item">
+                            <a href="#" class="quick-link">
+                                <span class="icon">👥</span>
+                                <span>Alumni</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
